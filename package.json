@@ -11,5 +11,14 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateusferrodasilva/maratona-discover-2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mateusferrodasilva/maratona-discover-2/issues"
+  },
+  "homepage": "https://github.com/mateusferrodasilva/maratona-discover-2#readme"
 }
