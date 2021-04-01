@@ -6,7 +6,7 @@ const routes = require("./routes")
 // adicionar configurações ao servidor, não configurar rotas
 server.use(express.static("public"))
 
-// routes
+// habilitar routes que vem do export.modules no routes.js
 server.use(routes)
 
 
