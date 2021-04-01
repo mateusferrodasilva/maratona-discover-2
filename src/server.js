@@ -2,6 +2,9 @@ const express = require("express")
 const server = express()
 const routes = require("./routes")
 
+// Semelhante ao uso
+server.set("view engine", 'ejs')
+
 // habilitar arquivos statics
 // adicionar configurações ao servidor, não configurar rotas
 server.use(express.static("public"))
