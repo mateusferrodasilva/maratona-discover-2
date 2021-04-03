@@ -9,9 +9,11 @@ server.set("view engine", 'ejs')
 // adicionar configurações ao servidor, não configurar rotas
 server.use(express.static("public"))
 
+// Usar o req.body 
+server.use(express.urlencoded({ extended: true }))
+
 // habilitar routes que vem do export.modules no routes.js
 server.use(routes)
-
 
 // Estabeleceu a conexão do servidor na porta 3000
 server.listen(3000, () => console.log('rodando'))
