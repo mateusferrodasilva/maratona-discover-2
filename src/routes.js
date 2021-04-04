@@ -30,7 +30,7 @@ const jobs = [
 ]
 
 //request response
-routes.get('/', (req, res) => res.render(views + "index", { profileName: profile.name, profileAvatar: profile.avatar}, { jobs }))
+routes.get('/', (req, res) => res.render(views + "index", { profileName: profile.name, profileAvatar: profile.avatar, jobs }))
 routes.get('/job', (req, res) => res.render(views + "job"))
 routes.post('/job', (req, res) => {
     // req.body = { name: 'asdf', 'daily-hours': '3.1', 'total-hours': '3'}
