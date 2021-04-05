@@ -88,7 +88,7 @@ const Job = {
         },
         save(req, res) {
             // req.body = { name: 'asdf', 'daily-hours': '3.1', 'total-hours': '3'}
-            const lastID = Job.data[Job.data.length - 1]?.id || 1;
+            const lastID = Job.data[Job.data.length - 1]?.id || 0;
 
             Job.data.push({
                 id: lastID + 1,
@@ -141,6 +141,7 @@ const Job = {
         delete(req,res) {
             const jobId = req.params.id
 
+            // retornar verdadeiro não altera, retorna false remove da array
             Job.data = Job.data.filter(job => Number(job.id) !== Number(jobId))
             return res.redirect('/')
         }
