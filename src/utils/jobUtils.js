@@ -17,5 +17,5 @@ module.exports = {
 
         return dayDiff
     },
-    calculateBudget: (job) => Profile.get()['value-hour'] * job["total-hours"]
+    calculateBudget: (job, value_hour) => value_hour * job["total-hours"]
 }
