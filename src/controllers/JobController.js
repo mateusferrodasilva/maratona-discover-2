@@ -6,12 +6,7 @@ module.exports = {
         return res.render("job")
     },
     async save(req, res) {
-        const jobs = await Job.get()
-        // req.body = { name: 'asdf', 'daily-hours': '3.1', 'total-hours': '3'}
-        const lastID = jobs[jobs.length - 1]?.id || 0;
-
-        Job.create({
-            id: lastID + 1,
+        await Job.create({
             name: req.body.name,
             'daily-hours': req.body["daily-hours"],
             'total-hours': req.body["total-hours"],

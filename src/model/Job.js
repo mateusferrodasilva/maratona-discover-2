@@ -22,7 +22,21 @@ module.exports = {
     delete(jobId) {
         data = data.filter(job => Number(job.id) !== Number(jobId))
     },
-    create(newJob) {
-        data.push(newJob)
+    async create(newJob) {
+        const db = await Database()
+
+        await db.run(`INSERT INTO jobs (
+            name, 
+            daily_hours,
+            total_hours,
+            created_at
+        ) VALUES (
+            "${newJob.name}",
+            ${newJob["daily-hours"]},
+            ${newJob["total-hours"]},
+            ${newJob["created-at"]}
+        )`)
+        
+        await db.close()
     }
 }
