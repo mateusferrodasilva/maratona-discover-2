@@ -3,9 +3,7 @@ const sqlite3 = require('sqlite3')
 const { open } = require('sqlite')
 
 // open precisa ser colocado dentro de uma estrutura (){}
-module.exports = () => {
-    open({
-        filename: './database.sqlite',
-        driver: sqlite3.Database
-    })
-}
+module.exports = () => open({
+    filename: './database.sqlite',
+    driver: sqlite3.Database
+})
