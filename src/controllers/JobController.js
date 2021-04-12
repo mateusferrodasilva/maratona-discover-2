@@ -5,8 +5,8 @@ module.exports = {
     create(req, res) {
         return res.render("job")
     },
-    save(req, res) {
-        const jobs = Job.get()
+    async save(req, res) {
+        const jobs = await Job.get()
         // req.body = { name: 'asdf', 'daily-hours': '3.1', 'total-hours': '3'}
         const lastID = jobs[jobs.length - 1]?.id || 0;
 
@@ -20,8 +20,8 @@ module.exports = {
 
         return res.redirect('/')
     },
-    show(req, res) {
-        const jobs = Job.get()
+    async show(req, res) {
+        const jobs = await Job.get()
         // pegando parametro do get :id
         const jobId = req.params.id
 
@@ -35,8 +35,8 @@ module.exports = {
 
         return res.render("job-edit", { job })
     },
-    update(req, res) {
-        const jobs = Job.get()
+    async update(req, res) {
+        const jobs = await Job.get()
         const jobId = req.params.id
 
         const job = jobs.find(job => Number(job.id) === Number(jobId))
