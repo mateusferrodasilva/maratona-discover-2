@@ -6,8 +6,12 @@
         <h1>
             <%= title %>
         </h1>
-        <% if(title === 'Meu Perfil') { %>
-        <input type="checkbox" name="switch-theme" id="switch">
-        <% } %>
+        <% if(title === 'Meu Perfil') { 
+            if(profile.theme === "dark"){ %>
+                <input type="checkbox" name="switch-theme" id="switch" form="form-profile" checked>
+            <% } else { %>
+                <input type="checkbox" name="switch-theme" id="switch" form="form-profile">
+        <% }
+        } %>
     </div>
 </header>
