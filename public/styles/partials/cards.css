@@ -1,3 +1,8 @@
+[data-theme="dark"] .card {
+  background: var(--color-primary);
+  border: 1px solid #E1E3E6;
+}
+
 .card {
   background: var(--color-text);
   border-radius: 0.313rem;

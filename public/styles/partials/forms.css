@@ -33,7 +33,7 @@ label {
 
   font-family: IBM Plex Sans;
   font-weight: 500;
-  color: #787880;
+  color: var(--color-label-form);
 
   margin-bottom: 1rem;
 }
@@ -42,7 +42,7 @@ input {
   font-family: IBM Plex Sans;
   font-weight: 500;
 
-  background: #FCFDFF;
+  background:var(--color-input-background);
 
   border: 1px solid #E1E3E6;
   border-radius: .313rem;

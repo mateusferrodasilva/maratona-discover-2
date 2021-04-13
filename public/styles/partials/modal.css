@@ -22,7 +22,7 @@
 }
 
 .modal {
-  background: #F0F2F5;
+  background: var(--color-modal-background);
 
   border-radius: 0.313rem;
 
