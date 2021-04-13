@@ -14,7 +14,8 @@ const initDb = {
             hours_per_day INTEGER, 
             days_per_week INTEGER, 
             vacation_per_year INTEGER,
-            value_hour INTEGER
+            value_hour INTEGER,
+            theme TEXT
         )`)
 
         await db.exec(`CREATE TABLE jobs (
@@ -32,7 +33,8 @@ const initDb = {
             hours_per_day,
             days_per_week, 
             vacation_per_year,
-            value_hour
+            value_hour,
+            theme
             ) VALUES (
             "Mateus",
             "https://github.com/mateusferrodasilva.png",
@@ -40,7 +42,8 @@ const initDb = {
             6,
             4,
             2,
-            20
+            20,
+            "dark"
         );`)
 
         await db.run(`INSERT INTO jobs (

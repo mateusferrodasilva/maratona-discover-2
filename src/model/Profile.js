@@ -15,7 +15,8 @@ module.exports = {
             "hours-per-day": data.hours_per_day,
             "days-per-week": data.days_per_week,
             "vacation-per-year": data.vacation_per_year,
-            "value-hour": data.value_hour
+            "value-hour": data.value_hour,
+            theme: data.theme
         }
     },
     async update(newProfileData){
