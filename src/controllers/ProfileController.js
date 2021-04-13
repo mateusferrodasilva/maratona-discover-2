@@ -7,6 +7,8 @@ module.exports = {
 
     async update(req, res) {
         // req.body para pegar os dados
+        const theme = req.body["switch-theme"] ? "dark" : "light"
+
         const data = req.body
 
         // definir quantas semanas tem num ano : 52
@@ -29,7 +31,8 @@ module.exports = {
         await Profile.update({
             ...profile,
             ...req.body,
-            "value-hour": valueHour
+            "value-hour": valueHour,
+            theme: theme
         })
 
         return res.redirect('/profile')

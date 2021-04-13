@@ -29,7 +29,8 @@ module.exports = {
         hours_per_day = ${newProfileData["hours-per-day"]},
         days_per_week = ${newProfileData["days-per-week"]},
         vacation_per_year = ${newProfileData["vacation-per-year"]},
-        value_hour = ${newProfileData["value-hour"]}
+        value_hour = ${newProfileData["value-hour"]},
+        theme = "${newProfileData.theme}"
         `)
 
         await db.close()
