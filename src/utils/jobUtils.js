@@ -1,5 +1,3 @@
-const Profile = require('../model/Profile')
-
 module.exports = {
     remainingDays(job) {
         // cálculo de tempo restante
